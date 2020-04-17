@@ -35,7 +35,7 @@
 
 .info-card {
   width: 90%;
-  height: 96%;
+  height: 95%;
   background-color: $color-3;
 
   .info-car {
@@ -56,10 +56,20 @@
       h1 {
         font-size: 4rem;
         text-transform: uppercase;
+        padding: 2rem;
       }
 
       p {
         font-size: 1.3rem;
+      }
+    }
+
+    &__img {
+      animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.8s both;
+
+      img {
+        width: 300px;
+        height: 180px;
       }
     }
 

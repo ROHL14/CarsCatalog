@@ -14,5 +14,11 @@
       height: 200px;
       width: 650px;
     }
+
+    &--1,
+    &--2,
+    &--3 {
+      animation: slide-right 1s ease-out;
+    }
   }
 }

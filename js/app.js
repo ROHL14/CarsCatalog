@@ -1,3 +1,4 @@
+// Objeto que contiene los autos
 brands = [
   {
     brand: "bmw",
@@ -5,6 +6,9 @@ brands = [
     features: [
       "Rendimiento de combustible (combinado): 13.3 km/l",
       "Emisiones de CO2 (combinado): 171 g/km",
+      "BWM Live Cockpit Professional",
+      "BMW Intelligent Personal Assistant",
+      "Velocidad máxima en km/h 250",
     ],
   },
   {
@@ -13,6 +17,9 @@ brands = [
     features: [
       "Consumo de combustible en L/100 km (promedio): 7.8",
       "Emisiones de CO2 en g/km (promedio): 179",
+      "Suspension Adaptive M",
+      "Dirección deportiva variable",
+      "Motor de gasolina de 4 cilindros de 2.0 litros BMW TwinPower Turbo",
     ],
   },
   {
@@ -21,6 +28,10 @@ brands = [
     features: [
       "Consumo de combustible en L/100 km (promedio): 6.4",
       "Emisiones de CO2 en g/km (promedio): 147",
+      "BMW Intelligent Personal Assistant",
+      "BWM Live Cockpit Professional",
+      "Sistema Operativo 7.0 BMW",
+      "Llave Digital",
     ],
   },
   {
@@ -29,6 +40,10 @@ brands = [
     features: [
       "Consumo de combustible en l/100 km (combinado): 7.4",
       "Emisiones de CO2 en g/km (combinado): 169",
+      "Suspension Adaptativa M",
+      "Freno Deportivo M",
+      "Air Breather",
+      "Capota",
     ],
   },
   {
@@ -177,12 +192,12 @@ brands = [
 
 cars = $("#cars");
 
-/*var car = "bmw";
-getCars(car);*/
+// Llamando la sidebar para los documentos
 $.get("sidebar.html", function (data) {
   $("#nav-placeholder").replaceWith(data);
 });
 
+// Función que devuelve la lista de autos de la marca indicada
 function getCars(e) {
   for (x in brands) {
     var car = brands[x];
@@ -205,6 +220,7 @@ function getCars(e) {
   });
 }
 
+// Función para mostrar la información del auto seleccionado
 function showCarInfo(e) {
   $(".info-card").html("");
   for (x in brands) {
@@ -213,12 +229,12 @@ function showCarInfo(e) {
     switch (car.name) {
       case e:
         carInfo = $(
-          `<div class='info-car zoomer'><div class='info-car__main'><h1>${e}</h1></div><div class='info-car__img'><img alt='${e}' src='./img/cars/${e}.png' width="350" height="200"></div><div class='info-car__perks'></div></div>`
+          `<div class='info-car zoomer'><div class='info-car__main'><h1>${e}</h1></div><div class='info-car__img'><img alt='${e}' src='./img/cars/${e}.png'></div><div class='info-car__perks'></div></div>`
         );
         $(".info-card").append(carInfo);
 
         for (z in car.features) {
-          console.log(car.features[z]);
+          //console.log(car.features[z]);
           carFeature = $(`<p class='fade-in'>-${car.features[z]}</p>`);
           $(".info-car__perks").append(carFeature);
         }
@@ -231,6 +247,7 @@ function showCarInfo(e) {
 
 var brandArea = $(".brand-button");
 
+// Llamando la funcion para que muestre la lista de autos
 brandArea.on("click", function () {
   cars.html("");
   var brandName = $(this).attr("name");
