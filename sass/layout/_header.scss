@@ -1,0 +1,36 @@
+.hero {
+  height: 78vh;
+  background-color: $color-3;
+
+  color: $color-white;
+
+  &__title,
+  &__branded {
+    margin-left: 2vw;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+  }
+
+  &__branded {
+    margin-top: 10vh;
+    width: 60%;
+
+    &--title {
+      font-size: 12rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &--paragraph {
+      width: 90%;
+      margin-top: 2vh;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+}

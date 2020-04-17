@@ -1,0 +1,18 @@
+.brands {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color-4;
+  /*position: absolute;
+  width: 91%;
+  z-index: -1;*/
+
+  &__section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

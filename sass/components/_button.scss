@@ -1,0 +1,53 @@
+.car-button {
+  width: 10rem;
+  height: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  border: 3px solid $color-3;
+  border-radius: 5px;
+  color: white;
+  background-color: $color-3;
+
+  &:hover {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+}
+
+.buy-button {
+  width: 80%;
+  height: 4rem;
+  color: white;
+  background-color: $color-3;
+  border-radius: 5px;
+  border: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.brand-button {
+  width: 65%;
+  height: 15rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 50rem;
+  background-color: transparent;
+
+  &:hover {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    background-color: $color-3;
+  }
+}

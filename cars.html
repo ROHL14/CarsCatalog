@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="René Hernández" />
+    <meta name="description" content="Web app de catalogo de autos" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animation -->
+    <link rel="stylesheet" href="css/wickedcss.min.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>MotorShop</title>
+  </head>
+  <body>
+    <div class="content">
+      <div id="nav-placeholder"></div>
+
+      <div class="products slide-left">
+        <section class="section__header">
+          <h1>Catalogo</h1>
+          <form action="" class="search">
+            <input
+              type="text"
+              name="searchbar"
+              id="searchbar"
+              class="search__input"
+              placeholder="Busca un auto"
+            />
+            <button class="search__button">
+              <svg class="search__icon">
+                <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+              </svg>
+            </button>
+          </form>
+        </section>
+
+        <section class="section__products">
+          <div class="section__products--brands fade-in">
+            <div class="brandlist" id="brandsArea">
+              <button class="brand-button" name="bmw">
+                <img
+                  src="./img/marcas/004-bmw.svg"
+                  alt="bmw"
+                  height="100"
+                  width="80"
+                />
+              </button>
+
+              <button class="brand-button" name="cadillac" type="submit">
+                <img
+                  src="./img/marcas/013-cadillac.svg"
+                  alt="cadillac"
+                  height="100"
+                  width="80"
+                />
+              </button>
+
+              <button class="brand-button" name="chevrolet">
+                <img
+                  src="./img/marcas/006-chevrolet.svg"
+                  alt="chevrolet"
+                  height="100"
+                  width="80"
+                />
+              </button>
+
+              <button class="brand-button" name="honda">
+                <img
+                  src="./img/marcas/010-honda.svg"
+                  alt="honda"
+                  height="100"
+                  width="80"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="section__products--cars">
+            <div class="carlist" id="cars"></div>
+          </div>
+
+          <div class="section__products--info">
+            <div class="info-card"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- JS file-->
+  <script src="./js/app.js"></script>
+</html>

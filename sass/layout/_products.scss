@@ -1,0 +1,55 @@
+.section {
+  &__header {
+    font-size: 1.4rem;
+    height: 10vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__products {
+    height: 90vh;
+    display: flex;
+
+    &--brands {
+      height: 100%;
+      width: 30%;
+
+      .brandlist {
+        height: 95%;
+        width: 50%;
+        margin: auto;
+        margin-top: 2rem;
+        background-color: $color-white;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &--cars {
+      height: 100%;
+      width: 40%;
+
+      .carlist {
+        height: 95%;
+        width: 90%;
+        margin: auto;
+        margin-top: 2rem;
+        background-color: $color-3;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &--info {
+      background-color: $color-3;
+      height: 100%;
+      width: 30%;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.card {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border: none;
+
+  &::hover {
+    background-color: $color-grey-light-2;
+  }
+}
+
+.car-card {
+  background-color: $color-white;
+  width: 100%;
+  height: 10rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  &__info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.info-card {
+  width: 90%;
+  height: 96%;
+  background-color: $color-3;
+
+  .info-car {
+    border-radius: 15px;
+    margin: auto;
+    height: 100%;
+    background-color: $color-white;
+
+    &__main,
+    &__img,
+    &__perks,
+    &__button {
+      margin-top: 2rem;
+      margin-left: 4rem;
+    }
+
+    &__main {
+      h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+
+    &__perks {
+      width: 100%;
+
+      p {
+        width: 70%;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
