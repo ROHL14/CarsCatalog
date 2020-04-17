@@ -193,8 +193,8 @@ brands = [
 cars = $("#cars");
 
 // Llamando la sidebar para los documentos
-$.get("sidebar.html", function (data) {
-  $("#nav-placeholder").replaceWith(data);
+$(function () {
+  $("#nav-placeholder").load("sidebar.html");
 });
 
 // Función que devuelve la lista de autos de la marca indicada
@@ -213,7 +213,7 @@ function getCars(e) {
         break;
     }
   }
-  $(".car-button").on("click", async function () {
+  $(".car-button").on("click", function () {
     var carName = $(this).attr("name");
 
     showCarInfo(carName);

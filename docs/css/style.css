@@ -310,10 +310,13 @@ body {
       width: 1.75rem;
       height: 1.75rem;
       margin-right: 2rem;
-      fill: currentColor; }
+      background-color: #fff;
+      border-radius: 8px; }
     .sidebar .side-nav__link:hover {
       color: #080a0e;
       transition: color 0.5s; }
+      .sidebar .side-nav__link:hover img {
+        background-color: transparent; }
 
 .section__header {
   height: 10vh;

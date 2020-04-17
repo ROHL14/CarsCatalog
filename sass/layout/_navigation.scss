@@ -71,12 +71,17 @@
       width: 1.75rem;
       height: 1.75rem;
       margin-right: 2rem;
-      fill: currentColor;
+      background-color: $color-white;
+      border-radius: 8px;
     }
 
     &__link:hover {
       color: $color-1;
       transition: color 0.5s;
+
+      img {
+        background-color: transparent;
+      }
     }
   }
 }
